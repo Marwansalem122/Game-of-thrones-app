@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter (lib\\presentation\\widget\\searchfield.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib\\presentation\\widget\\searchfield.dart"
+        }
+    ]
+}
