@@ -8,7 +8,9 @@ final class CharacterInitial extends CharacterState {}
  final List<Character> characters;
   CharactersLoad( this.characters);
 }
- class CharacterSuccess extends CharacterState {}
+ class CharacterSuccess extends CharacterState {
+  
+ }
 final class CharacterFauilure extends CharacterState {}
  class QuotesLoaded extends CharacterState {
   final String quotes;

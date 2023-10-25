@@ -13,13 +13,13 @@ class CharactersRepository {
 
   Future<List<Character>> getAllcharacters() async {
     final characters=await characterswebservices.getAllcharacters();
-   // print("==========${characters.toString()}");
+ 
     return characters.map((character) => Character.fromJson(character )).toList();
   }
    Future<String> getQuote(String characterName) async {
   String jsonString = await rootBundle.loadString('assets/quotes.json');
   List<dynamic> jsonData = jsonDecode(jsonString);
-  print(jsonData);
+  // print(jsonData);
   for (var json in jsonData) {
     if (json["from"] == characterName) {
       return json["quote"];

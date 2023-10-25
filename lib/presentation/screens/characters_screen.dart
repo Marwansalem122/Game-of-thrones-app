@@ -53,8 +53,6 @@ class _CharactersScreenState extends State<CharactersScreen> {
             return noInternet(h);
           }
         },child: showLoadingIndicator(),)
-
-        //buildBlockBWidget(),
         );
   }
 

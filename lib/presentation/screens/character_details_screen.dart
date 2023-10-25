@@ -3,6 +3,8 @@ import 'package:bloc_test/business_logic/cubit/character_cubit.dart';
 import 'package:bloc_test/constant/my_colors.dart';
 import 'package:bloc_test/data/models/characters.dart';
 import 'package:bloc_test/data/models/quotes.dart';
+import 'package:bloc_test/presentation/screens/characters_screen.dart';
+// import 'package:bloc_test/presentation/screens/characters_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,7 +21,7 @@ class CaracterDtailsScreen extends StatelessWidget {
       backgroundColor: Mycolor.mygrey,
       body: CustomScrollView(
         slivers: [
-          buildSliverAppBar(h, w),
+          buildSliverAppBar(h, w,context),
           SliverList(
               delegate: SliverChildListDelegate([
             Container(
@@ -53,8 +55,11 @@ class CaracterDtailsScreen extends StatelessWidget {
     );
   }
 
-  buildSliverAppBar(var h, var w) {
+  buildSliverAppBar(var h, var w,var cont) {
     return SliverAppBar(
+      // leading: IconButton(onPressed: (){
+      //   Navigator.of(cont).push(MaterialPageRoute(builder: (cont)=>const CharactersScreen()));
+      // }, icon:const Icon(Icons.arrow_back)),
       expandedHeight: h * 0.7,
       pinned: true,
       stretch: true,

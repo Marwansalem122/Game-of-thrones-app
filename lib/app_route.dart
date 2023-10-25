@@ -22,13 +22,13 @@ class AppRoute {
         return MaterialPageRoute(
             builder: (_) => BlocProvider(
                   create: (context) => characterCubit,
-                  child: CharactersScreen(),
+                  child: const CharactersScreen(),
                 ));
       case charactersDetailScreen:
         final character = setting.arguments as Character;
         return MaterialPageRoute(
             builder: (_) => BlocProvider(
-                create: (BuildContext context) =>characterCubit,
+                create: (context) => CharacterCubit(charactersRepository),
                 child: CaracterDtailsScreen(
                   character: character,
                 )));
